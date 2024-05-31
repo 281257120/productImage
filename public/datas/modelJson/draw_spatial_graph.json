@@ -1,0 +1,343 @@
+{
+  "data_type": "station",
+  "data_sources": "N3181,120.5239,30.6256,0.5;N3121,120.3294,30.6056,0.52;57960,120.4378,30.5422,0.42;N3141,120.5431,30.5333,0.6;N3141,120.5519,30.7458,0.6",
+  "interpolation": {
+    "method": {
+      "name": "idw",
+      "power": 1,
+      "search_radius": 6
+    },
+    "scope": [],
+    "resolution": 0.002
+  },
+  "area_para": {
+    "area_lev": 1,
+    "area_code": 330483
+  },
+  "figure": {
+    "fig_size": [
+      12,
+      12
+    ],
+    "rect_size": [
+      0.1,
+      0.1,
+      0.8,
+      0.8
+    ]
+  },
+  "map_para": {
+    "under_para": {
+      "under_type": "tianditu",
+      "level": 11,
+      "layer": "vec",
+      "mark": "cva"
+    },
+    "ax_pad": [
+      0.07,
+      0.07,
+      0.04,
+      0.04
+    ],
+    "area_shape_max": {
+      "shp_file": "",
+      "lw": 1.2,
+      "ec": "#A57346",
+      "zorder": 6,
+      "vector_markers": {
+        "attr_info": "FNAME",
+        "out_attr_path": "D:/neo_share/fxds/data/绍兴市.csv",
+        "zorder": 8,
+        "draw_mark": {
+          "is_display": true,
+          "color": "#FF0000",
+          "radius": 0.01,
+          "style": 1
+        },
+        "draw_name": {
+          "is_display": true,
+          "fontsize": 15,
+          "color": "#FF0000",
+          "horizontalalignment": "left",
+          "verticalalignment": "center",
+          "x_pad": 0.01,
+          "y_pad": 0.00
+        }
+      }
+    },
+    "subordinate_regions": [
+      {
+        "lower_level": 3,
+        "shp_file": "",
+        "lw": 0.8,
+        "ec": "#000000",
+        "zorder": 3,
+        "vector_markers": {
+          "attr_info": "FNAME",
+          "out_attr_path": "D:/neo_share/fxds/data/绍兴市.csv",
+          "zorder": 8,
+          "draw_mark": {
+            "is_display": true,
+            "color": "#FF0000",
+            "radius": 0.01,
+            "style": 1
+          },
+          "draw_name": {
+            "is_display": true,
+            "fontsize": 15,
+            "color": "#FF0000",
+            "horizontalalignment": "left",
+            "verticalalignment": "center",
+            "x_pad": 0.01,
+            "y_pad": 0.00
+          }
+        }
+      }
+    ],
+    "river_system": [
+      {
+        "lower_level": 5,
+        "shp_file": "",
+        "lw": 0.8,
+        "ec": "#A0D7F9",
+        "zorder": 7
+      }
+    ],
+    "other_shape": [],
+    "grid_lines": {
+      "linewidth": 0.0,
+      "color": "#CCCCCC",
+      "alpha": 1,
+      "linestyle": "--"
+    }
+  },
+  "grade_para": {
+    "method": "natural_breaks",
+    "n_classes": 4
+  },
+  "contour_f": {
+    "fill_type": [
+      "area"
+    ],
+    "levels": [
+      -20,
+      -10,
+      0,
+      10,
+      20
+    ],
+    "color_code": [
+      "#E5F2FA",
+      "#BADAF3",
+      "#A5BFF2",
+      "#80A6CB"
+    ],
+    "extend": "neither",
+    "alpha": 0.85,
+    "sigma": 0,
+    "fill_val": {
+      "type": "grid",
+      "decimals": 0,
+      "step": 50
+    },
+    "leg_para": {
+      "type": "lump",
+      "level_str": [
+        "低等级",
+        "较低等级",
+        "较高等级",
+        "高等级"
+      ],
+      "auto_size": 0,
+      "reversed": "asc",
+      "patch": {
+        "edgecolor": "#000000",
+        "linewidth": 0.5
+      },
+      "leg_handle": {
+        "ncol": 4,
+        "loc": "lower center",
+        "handleheight": 2,
+        "handlelength": 3,
+        "frameon": false,
+        "borderaxespad": 0,
+        "fontsize": 14
+      },
+      "leg_title": {
+        "s": "图例(mm)",
+        "fontsize": 13
+      }
+    }
+  },
+  "ticks_para": {
+    "lon_ticks": [
+      119.8,
+      120.1,
+      120.4,
+      120.7,
+      121.0
+    ],
+    "lat_ticks": [
+      29.2,
+      29.4,
+      29.6,
+      29.8,
+      30.0,
+      30.2
+    ],
+    "nx": 1,
+    "ny": 1,
+    "label_size": 13,
+    "line_width": 1.2,
+    "xy_formatter": {
+      "dms": false
+    },
+    "major": {
+      "width": 1.2,
+      "length": 6,
+      "pad": 4,
+      "top": true,
+      "right": true,
+      "labeltop": true,
+      "labelright": true
+    },
+    "minor": {
+      "width": 1.2,
+      "length": 4,
+      "pad": 4,
+      "top": true,
+      "right": true,
+      "labeltop": true,
+      "labelright": true
+    },
+    "plt_yticks": {
+      "rotation": 90,
+      "verticalalignment": "center"
+    }
+  },
+  "desc_para": {
+    "heading": {
+      "x": 0.04,
+      "y": 0.05,
+      "x_alalignment": "left",
+      "y_alalignment": "top",
+      "s": "地震烈度分析",
+      "pop": {
+        "fontsize": 25,
+        "horizontalalignment": "left",
+        "verticalalignment": "bottom"
+      }
+    },
+    "subtitle": {
+      "x": 0.04,
+      "y": 0.05,
+      "x_alalignment": "left",
+      "y_alalignment": "top",
+      "s": "副标题",
+      "pop": {
+        "fontsize": 25,
+        "horizontalalignment": "left",
+        "verticalalignment": "bottom"
+      }
+    },
+    "pub_unit": {
+      "x": 0.04,
+      "y": 0.05,
+      "x_alalignment": "left",
+      "y_alalignment": "top",
+      "s": "发布单位",
+      "pop": {
+        "fontsize": 25,
+        "horizontalalignment": "left",
+        "verticalalignment": "bottom"
+      }
+    },
+    "par_time": {
+      "x": 0.04,
+      "y": 0.05,
+      "x_alalignment": "left",
+      "y_alalignment": "top",
+      "s": "制作时间",
+      "pop": {
+        "fontsize": 25,
+        "horizontalalignment": "left",
+        "verticalalignment": "bottom"
+      }
+    },
+    "other_desc": [
+      {
+        "x": 0.04,
+        "y": 0.05,
+        "x_alalignment": "left",
+        "y_alalignment": "top",
+        "s": "地震烈度分析",
+        "pop": {
+          "fontsize": 25,
+          "horizontalalignment": "left",
+          "verticalalignment": "bottom"
+        }
+      },
+      {
+        "x": 0.04,
+        "y": 0.05,
+        "x_alalignment": "left",
+        "y_alalignment": "top",
+        "s": "地震烈度分析",
+        "pop": {
+          "fontsize": 25,
+          "horizontalalignment": "left",
+          "verticalalignment": "bottom"
+        }
+      }
+    ]
+  },
+  "com_scale": {
+    "compass": {
+      "x": 0.95,
+      "y": 0.92,
+      "size": 15,
+      "style": "arrow"
+    },
+    "scale": {
+      "x": 0.05,
+      "y": 0.1,
+      "length": 5,
+      "units": "km",
+      "xticks": [
+        0,
+        3,
+        5
+      ]
+    }
+  },
+  "icon_img": [
+    {
+      "img_name": "img_1",
+      "img_path": "{root_dir}/data/icon/img_1.jpg",
+      "rect_size": [
+        0.0,
+        0.045,
+        0.035,
+        0.035
+      ],
+      "x_alalignment": "left",
+      "y_alalignment": "top"
+    }
+  ],
+  "out_para": {
+    "img_path": "{root_dir}/data/example/png/地震烈度分析.png",
+    "img_pop": {
+      "pad_inches": 0.3,
+      "dpi": 96
+    },
+    "geojson_path": ""
+  },
+  "data_conn": {
+    "engine": "mysql",
+    "host": "39.105.59.89",
+    "user": "root",
+    "passwd": "spd@123",
+    "port": 8600,
+    "database": "product_image"
+  }
+}

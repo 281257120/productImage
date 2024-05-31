@@ -1,0 +1,163 @@
+{
+  "id": "4550904",
+  "name": "出图系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6056162",
+      "name": "收缩箭头",
+      "font_class": "shousuojiantou",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "6056164",
+      "name": "收缩上箭头",
+      "font_class": "shousuoshangjiantou",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "3467623",
+      "name": "数据来源",
+      "font_class": "shujulaiyuan1",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "9913143",
+      "name": "数据类型",
+      "font_class": "shujuleixing1",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "13010656",
+      "name": "数据类型-url",
+      "font_class": "shujuleixing-url",
+      "unicode": "e6d9",
+      "unicode_decimal": 59097
+    },
+    {
+      "icon_id": "39230564",
+      "name": "比例尺",
+      "font_class": "bilichi",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "40208417",
+      "name": "图像设置",
+      "font_class": "tuxiangshezhi",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "1032859",
+      "name": "美术",
+      "font_class": "meishu",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "3722224",
+      "name": "空间差值",
+      "font_class": "kongjianchazhi",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "4784116",
+      "name": "图标",
+      "font_class": "tubiao",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "6850820",
+      "name": "文字",
+      "font_class": "wenzi",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7097530",
+      "name": "数据来源",
+      "font_class": "shujulaiyuan",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "8897312",
+      "name": "输出",
+      "font_class": "shuchu",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "10544073",
+      "name": "绘制区域",
+      "font_class": "huizhiquyu",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "11187367",
+      "name": "数据类型",
+      "font_class": "shujuleixing",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "12856486",
+      "name": "图层设置",
+      "font_class": "tucengshezhi",
+      "unicode": "e82b",
+      "unicode_decimal": 59435
+    },
+    {
+      "icon_id": "15524359",
+      "name": "数据库设置",
+      "font_class": "shujukushezhi",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "22667813",
+      "name": "方法",
+      "font_class": "fangfa",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "23719360",
+      "name": "填色",
+      "font_class": "tianse",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "36096848",
+      "name": "指北针-copy",
+      "font_class": "zhibeizhen1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "37842891",
+      "name": "编辑坐标轴",
+      "font_class": "bianjizuobiaozhou",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "25739940",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

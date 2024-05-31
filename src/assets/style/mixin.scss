@@ -1,0 +1,44 @@
+@mixin scroll() {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 0.2rem; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.1rem;
+    width: 10rem;
+    background-color: var(--themeQCheckboxTruthyColor);
+  }
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    background: rgba(18, 41, 83, 0.5);
+    border-radius: 10px;
+  }
+}
+
+@mixin ellipsis() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+//显示多行，省略号
+@mixin mellipsis($row: 1) {
+  /* 显示两行，省略号 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

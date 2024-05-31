@@ -1,0 +1,1948 @@
+[
+  {
+    "title": "数据类型",
+    "icon": "icon-shujuleixing1",
+    "prop": "data_type",
+    "isTop": true,
+    "value": "",
+    "type": "radio",
+    "children": [
+      {
+        "label": "站点",
+        "value": "station"
+      },
+      {
+        "label": "格点",
+        "value": "grid"
+      }
+    ]
+  },
+  {
+    "title": "数据来源",
+    "icon": "icon-shujuleixing-url",
+    "prop": "data_sources",
+    "value": "",
+    "popup": "btn",
+    "popupWidth": 300,
+    "isCuntom": true,
+    "popupObj": {
+      "title": "站点类型数据来源可包含",
+      "type": "radio",
+      "value": "",
+      "valueArr": [],
+      "children": [
+        {
+          "type": "N",
+          "label": "自定义字符串",
+          "value": "N3181,120.5239,30.6256,0.5;N3121,120.3294,30.6056,0.52;57960,120.4378,30.5422,0.42;N3141,120.5431,30.5333,0.6;N3141,120.5519,30.7458,0.6"
+        },
+        {
+          "type": ".csv",
+          "label": "csv文件",
+          "msg": "*注：确定文件存在",
+          "value": "./data/csv/obs_1.csv"
+        },
+        {
+          "type": "select",
+          "label": "sql语句",
+          "msg": " *注：顺序依次为站号、站名、经度、纬度、站点值。",
+          "value": "select Station_Id_C,Station_Name,Lon,Lat,Station_Val from t_station_val"
+        }
+      ]
+    },
+    "type": "textarea"
+  },
+  {
+    "title": "绘制区域",
+    "icon": "icon-huizhiquyu",
+    "prop": "area_para",
+    "isTop": true,
+    "children": [
+      {
+        "title": "区域等级",
+        "prop": "area_lev",
+        "type": "radio",
+        "value": "",
+        "children": [
+          {
+            "value": "0",
+            "label": "中国"
+          },
+          {
+            "value": "1",
+            "label": "省"
+          },
+          {
+            "value": "2",
+            "label": "市"
+          },
+          {
+            "value": "3",
+            "label": "县"
+          },
+          {
+            "value": "4",
+            "label": "镇"
+          }
+        ]
+      },
+      {
+        "title": "区域编码",
+        "prop": "area_code",
+        "type": "input",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "创建图像",
+    "icon": "icon-tuxiangshezhi",
+    "prop": "figure",
+    "isTop": true,
+    "children": [
+      {
+        "title": "图像画布大小；[width,height]",
+        "prop": "fig_size",
+        "children": [
+          {
+            "title": "宽",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "高",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "title": "子图区域的大小及位置。用来投影所需的区域；[left,bottom,width,height]",
+        "prop": "rect_size",
+        "children": [
+          {
+            "title": "左",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "下",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "宽",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "高",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "图层设置",
+    "icon": "icon-tucengshezhi",
+    "prop": "map_para",
+    "isTop": true,
+    "children": [
+      {
+        "title": "底图设置为天地图；白板图忽略此参数。",
+        "prop": "under_para",
+        "children": [
+          {
+            "title": "地图类型",
+            "prop": "under_type",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "tianditu",
+                "label": "天地图"
+              },
+              {
+                "value": "baibantu",
+                "label": "白板图"
+              }
+            ]
+          },
+          {
+            "title": "天地图缩放层次",
+            "prop": "level",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "天地图对应的不同图层",
+            "prop": "layer",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "label": "矢量",
+                "value": "vec"
+              },
+              {
+                "label": "影像",
+                "value": "img"
+              },
+              {
+                "label": "地形",
+                "value": "ter"
+              }
+            ]
+          },
+          {
+            "title": "不同图层的注记",
+            "prop": "mark",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "label": "矢量",
+                "value": "cva"
+              },
+              {
+                "label": "影像",
+                "value": "cia"
+              },
+              {
+                "label": "地形",
+                "value": "cta"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "投影的区域距离坐标轴的距离",
+        "prop": "ax_pad",
+        "popup": "btn",
+        "isCuntom": true,
+        "popupWidth": 300,
+        "popupObj": {
+          "title": "投影的区域距离坐标轴的距离",
+          "type": "radio",
+          "value": "",
+          "valueArr": [],
+          "children": [
+            {
+              "label": "自定义字符串",
+              "prop": "custom",
+              "label_": "[left,bottom,width,height]",
+              "value": "0.07,0.07,0.04,0.04"
+            },
+            {
+              "label": "自适应",
+              "prop": "system",
+              "label_": "",
+              "value": ""
+            }
+          ]
+        },
+        "children": [
+          {
+            "title": "左",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "下",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "宽",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "高",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "title": "绘图区域对应的shp",
+        "prop": "area_shape_max",
+        "children": [
+          {
+            "title": "自定义shp路径，默认空字符为程序自带的shp",
+            "prop": "shp_file",
+            "type": "input",
+            "value": ""
+          },
+          {
+            "title": "shp线形宽度",
+            "prop": "lw",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "线形",
+            "prop": "ec",
+            "type": "color-picker",
+            "value": ""
+          },
+          {
+            "title": "图层顺序 最大的区域为6",
+            "prop": "zorder",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "是否添加矢量标记",
+            "prop": "vector_markers",
+            "isNegligible": true,
+            "ngligibleVal": true,
+            "children": [
+              {
+                "title": "需要标记的值在shp中对应的属性名称，如FNAME",
+                "prop": "attr_info",
+                "type": "input",
+                "value": ""
+              },
+              {
+                "title": "通过out_attr_path将标记值导出为csv进行位置的微调后自定义使用，如： D:/neo_share/fxds/data/绍兴市.csv。",
+                "prop": "out_attr_path",
+                "type": "input",
+                "value": ""
+              },
+              {
+                "title": "图层顺序 图层顺序 固定值 8",
+                "prop": "zorder",
+                "type": "input-number",
+                "value": 8
+              },
+              {
+                "title": "绘制标记图形",
+                "prop": "draw_mark",
+                "children": [
+                  {
+                    "title": "是否绘制",
+                    "prop": "is_display",
+                    "type": "switch",
+                    "value": false
+                  },
+                  {
+                    "title": "颜色",
+                    "prop": "color",
+                    "type": "color-picker",
+                    "value": ""
+                  },
+                  {
+                    "title": "半径",
+                    "prop": "radius",
+                    "type": "input-number",
+                    "value": 0
+                  },
+                  {
+                    "title": "样式",
+                    "prop": "style",
+                    "type": "radio",
+                    "value": "",
+                    "children": [
+                      {
+                        "value": "1",
+                        "label": "小1"
+                      },
+                      {
+                        "value": "2",
+                        "label": "大2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "绘制名称",
+                "prop": "draw_name",
+                "children": [
+                  {
+                    "title": "是否绘制",
+                    "prop": "is_display",
+                    "type": "switch",
+                    "value": false
+                  },
+                  {
+                    "title": "字体大小",
+                    "prop": "fontsize",
+                    "type": "input-number",
+                    "value": 0
+                  },
+                  {
+                    "title": "颜色",
+                    "prop": "color",
+                    "type": "color-picker",
+                    "value": ""
+                  },
+                  {
+                    "title": "水平对齐",
+                    "prop": "horizontalalignment",
+                    "type": "radio",
+                    "value": "",
+                    "children": [
+                      {
+                        "value": "top",
+                        "label": "靠上"
+                      },
+                      {
+                        "value": "right",
+                        "label": "靠右"
+                      },
+                      {
+                        "value": "bottom",
+                        "label": "靠下"
+                      },
+                      {
+                        "value": "left",
+                        "label": "靠左"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "垂直对齐",
+                    "prop": "verticalalignment",
+                    "type": "radio",
+                    "value": "",
+                    "children": [
+                      {
+                        "value": "left",
+                        "label": "靠左"
+                      },
+                      {
+                        "value": "center",
+                        "label": "居中"
+                      },
+                      {
+                        "value": "right",
+                        "label": "靠右"
+                      },
+                      {
+                        "value": "bottom",
+                        "label": "靠下"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "半径距离x轴的外边距",
+                    "prop": "x_pad",
+                    "type": "input-number",
+                    "value": 0
+                  },
+                  {
+                    "title": "距离y轴的外边距",
+                    "prop": "y_pad",
+                    "type": "input-number",
+                    "value": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "是否叠加更多级别的shp",
+        "prop": "subordinate_regions",
+        "type": "tree-list3",
+        "value": [],
+        "checkeds": [
+          {
+            "value": false,
+            "isDisabled": true,
+            "lower_level": 1,
+            "label": "省"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 2,
+            "label": "市"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 3,
+            "label": "县"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 4,
+            "label": "镇"
+          }
+        ]
+      },
+      {
+        "title": "是否叠加流域图层",
+        "prop": "river_system",
+        "type": "tree-list4",
+        "value": [],
+        "checkeds": [
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 1,
+            "label": "1级"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 2,
+            "label": "2级"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 3,
+            "label": "3级"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 4,
+            "label": "4级"
+          },
+          {
+            "value": false,
+            "isDisabled": false,
+            "lower_level": 5,
+            "label": "5级"
+          }
+        ]
+      },
+      {
+        "title": "是否绘制网格线",
+        "prop": "grid_lines",
+        "children": [
+          {
+            "title": "网格线宽度",
+            "prop": "linewidth",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "网格线宽度",
+            "prop": "color",
+            "type": "color-picker",
+            "value": ""
+          },
+          {
+            "title": "透明度",
+            "prop": "alpha",
+            "value": "",
+            "step": 0.1,
+            "type": "slider",
+            "showStops": true,
+            "max": 1,
+            "min": 0
+          },
+          {
+            "title": "样式",
+            "prop": "linestyle",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "--",
+                "label": "--"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "分级方法",
+    "icon": "icon-fangfa",
+    "prop": "grade_para",
+    "isNegligible": true,
+    "ngligibleVal": true,
+    "isTop": true,
+    "children": [
+      {
+        "title": "分级方法(更多分级方法陆续接入中)",
+        "prop": "method",
+        "type": "radio",
+        "value": "",
+        "children": [
+          {
+            "value": "natural_breaks",
+            "label": "自然断点"
+          }
+        ]
+      },
+      {
+        "title": "分多少个区间",
+        "prop": "n_classes",
+        "min": 0,
+        "type": "input-number",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "title": "数据填充",
+    "icon": "icon-tianse",
+    "prop": "contour_f",
+    "isTop": true,
+    "children": [
+      {
+        "title": "填充类型",
+        "popup": "area等值面 | line等值线，两者都可以填充；填充的类型将对应输出的geojson文件， 这里填充几个类型，geojson将提取对应的几个类型。",
+        "prop": "fill_type",
+        "type": "checkbox",
+        "value": [],
+        "children": [
+          {
+            "value": "area",
+            "label": "等值面"
+          },
+          {
+            "value": "line",
+            "label": "等值线"
+          }
+        ]
+      },
+      {
+        "title": "颜色扩展方向",
+        "prop": "extend",
+        "popup": "neither：不延伸色标\nlevels和color_code长度为5: 4; \n both：向两端都延伸色标\nlevels和color_code长度为3： 4\nmin：仅向较小一端延伸色标\nlevels和color_code长度为4： 4\nmax：仅向较大一端延伸色标\nlevels和color_code长度为4： 4\n*注意：\n如果选择neither，那么5： 4的含义为\n5个区间数值和4个颜色：\n数值1-数值2 = 颜色1\n数值2-数值3 = 颜色2\n数值3-数值4 = 颜色3\n数值4-数值5 = 颜色4",
+        "popupWidth": 250,
+        "value": "",
+        "type": "radio",
+        "children": [
+          {
+            "value": "neither",
+            "label": "不扩展"
+          },
+          {
+            "value": "both",
+            "label": "向两端延伸色标"
+          },
+          {
+            "value": "min",
+            "label": "向较小一端延伸色标"
+          },
+          {
+            "value": "max",
+            "label": "向较大一端延伸色标"
+          }
+        ]
+      },
+      {
+        "title": "区间对应的色标",
+        "prop": "color_code",
+        "value": [
+          "#E5F2FA",
+          "#BADAF3",
+          "#A5BFF2",
+          "#80A6CB"
+        ],
+        "type": "color-picker-list"
+      },
+      {
+        "title": "分多少个区间,区间对应的色标,色块对应的描述",
+        "prop": "levels",
+        "minLen": 0,
+        "popupWidth": 300,
+        "popup": "levels：如果使用 grade_para 分级方法，该参数失效，如没有使用grade_para分级方法，该参数必填 \ncolor_code：区间对应的色标\nvel_str：主要用于色块对应的描述；色条可忽略此参数，默认使用levels来描述。\n*该参数length要与contour_f中的color_code一样。一个颜色一个描述",
+        "value": [],
+        "type": "input-number-list"
+      },
+      {
+        "title": "图例设置",
+        "prop": "leg_para",
+        "children": [
+          {
+            "title": "图例类型",
+            "prop": "type",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "lump",
+                "label": "色块"
+              },
+              {
+                "value": "bar",
+                "label": "色条"
+              }
+            ]
+          },
+          {
+            "title": "色块对应的描述",
+            "popup": "主要用于色块对应的描述",
+            "prop": "level_str",
+            "type": "input-list",
+            "value": []
+          },
+          {
+            "title": "自适应的图例个数",
+            "prop": "auto_size",
+            "value": 0,
+            "type": "input-number"
+          },
+          {
+            "title": "图例顺序",
+            "prop": "reversed",
+            "value": "",
+            "type": "radio",
+            "children": [
+              {
+                "value": "asc",
+                "label": "升序"
+              },
+              {
+                "value": "desc",
+                "label": "降序"
+              }
+            ]
+          },
+          {
+            "title": "边框样式",
+            "prop": "patch",
+            "children": [
+              {
+                "title": "边框颜色",
+                "prop": "edgecolor",
+                "value": "",
+                "type": "color-picker"
+              },
+              {
+                "title": "边框宽度",
+                "prop": "linewidth",
+                "value": 0,
+                "type": "input-number"
+              }
+            ]
+          },
+          {
+            "title": "图例布局",
+            "prop": "leg_handle",
+            "children": [
+              {
+                "title": "分几行显示",
+                "prop": "ncol",
+                "value": 0,
+                "type": "input-number"
+              },
+              {
+                "title": "位置",
+                "prop": "loc",
+                "value": "",
+                "type": "radio",
+                "children": [
+                  {
+                    "value": "best",
+                    "label": "自动选择最好的位置"
+                  },
+                  {
+                    "value": "upper right",
+                    "label": "右上角"
+                  },
+                  {
+                    "value": "upper left",
+                    "label": "左上角"
+                  },
+                  {
+                    "value": "lower left",
+                    "label": "左下角"
+                  },
+                  {
+                    "value": "lower right",
+                    "label": "右下角"
+                  },
+                  {
+                    "value": "right",
+                    "label": "右边"
+                  },
+                  {
+                    "value": "center left",
+                    "label": "中间左边"
+                  },
+                  {
+                    "value": "center right",
+                    "label": "中间右边"
+                  },
+                  {
+                    "value": "lower center",
+                    "label": "底部中间"
+                  },
+                  {
+                    "value": "upper center",
+                    "label": "顶部中间"
+                  },
+                  {
+                    "value": "center",
+                    "label": "中间"
+                  }
+                ]
+              },
+              {
+                "title": "高度",
+                "prop": "handleheight",
+                "value": 0,
+                "type": "input-number"
+              },
+              {
+                "title": "长度",
+                "prop": "handlelength",
+                "value": 0,
+                "type": "input-number"
+              },
+              {
+                "title": "是否显示边框",
+                "prop": "frameon",
+                "value": false,
+                "type": "switch"
+              },
+              {
+                "title": "图例和坐标轴之间的边距",
+                "prop": "borderaxespad",
+                "value": 0,
+                "type": "input-number"
+              },
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "value": 0,
+                "type": "input-number"
+              }
+            ]
+          },
+          {
+            "title": "图例布局",
+            "prop": "leg_title",
+            "children": [
+              {
+                "title": "图例标题",
+                "prop": "s",
+                "value": "",
+                "type": "input"
+              },
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "value": 0,
+                "type": "input-number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "填充透明度；默认为1不透明",
+        "prop": "alpha",
+        "value": "",
+        "step": 0.1,
+        "type": "slider",
+        "showStops": true,
+        "max": 1,
+        "min": 0
+      },
+      {
+        "title": "高斯滤波(平滑)的强度;默认为0;*值越大强度越高。",
+        "prop": "sigma",
+        "value": 0,
+        "type": "input-number"
+      },
+      {
+        "title": "是否填值",
+        "prop": "fill_val",
+        "children": [
+          {
+            "title": "类型",
+            "prop": "type",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "grid",
+                "label": "格点",
+                "isDisabled": false
+              },
+              {
+                "value": "station",
+                "label": "站点",
+                "isDisabled": false
+              }
+            ]
+          },
+          {
+            "title": "填值保留的小数",
+            "prop": "decimals",
+            "value": 0,
+            "type": "input-number"
+          },
+          {
+            "title": "步长",
+            "popup": "如果分辨率太细，没有办法针对每个网格填值，根据区域进行缩放填值；只对grid填值生效",
+            "prop": "step",
+            "value": 0,
+            "type": "input-number"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "站点数据空间插值。",
+    "icon": "icon-kongjianchazhi",
+    "prop": "interpolation",
+    "isTop": true,
+    "children": [
+      {
+        "title": "插值方法及参数",
+        "prop": "method",
+        "popup": "数据类型是grid格点时忽略此参数",
+        "children": [
+          {
+            "title": "插值方法",
+            "prop": "name",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "idw",
+                "label": "idw"
+              }
+            ]
+          },
+          {
+            "title": "幂值",
+            "prop": "power",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "半径",
+            "prop": "search_radius",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "title": "插值的空间范围",
+        "prop": "scope",
+        "popup": "btn",
+        "isCuntom": true,
+        "popupWidth": 300,
+        "popupObj": {
+          "title": "插值的空间范围",
+          "type": "radio",
+          "value": "",
+          "valueArr": [],
+          "children": [
+            {
+              "label": "自定义字符串",
+              "prop": "custom",
+              "label_": "[lon1,lon2,lat1,lat2]",
+              "value": "0,0,0,0"
+            },
+            {
+              "label": "自适应",
+              "prop": "system",
+              "label_": "",
+              "value": ""
+            }
+          ]
+        },
+        "children": [
+          {
+            "title": "lon1",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "lon2",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "lat1",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "lat2",
+            "prop": "",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "title": "插值数据的精度；空间分辨率",
+        "prop": "resolution",
+        "popup": "*需要从较大的分辨率尝试降低，从插值效果及效率来综合确定该值。例如从分辨率1开始逐步降低 0.9 0.7 依次类推",
+        "type": "input-number",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "title": "坐标轴",
+    "icon": "icon-bianjizuobiaozhou",
+    "prop": "ticks_para",
+    "isTop": true,
+    "children": [
+      {
+        "title": "x轴主刻度标签；[]代表自适应",
+        "prop": "lon_ticks",
+        "type": "input-number-list",
+        "value": []
+      },
+      {
+        "title": "y轴主刻度标签；[]代表自适应",
+        "prop": "lat_ticks",
+        "type": "input-number-list",
+        "value": []
+      },
+      {
+        "title": "x轴主刻度之间次刻度的个数",
+        "prop": "nx",
+        "type": "input-number",
+        "value": 0
+      },
+      {
+        "title": "y轴主刻度之间次刻度的个数",
+        "prop": "ny",
+        "type": "input-number",
+        "value": 0
+      },
+      {
+        "title": "刻度值字体大小",
+        "prop": "label_size",
+        "type": "input-number",
+        "value": 0
+      },
+      {
+        "title": "坐标轴线条粗细",
+        "prop": "line_width",
+        "type": "input-number",
+        "value": 0
+      },
+      {
+        "title": "xy坐标轴刻度值格式化",
+        "prop": "xy_formatter",
+        "children": [
+          {
+            "title": "将经纬度显示为度分秒格式",
+            "prop": "dms",
+            "type": "switch",
+            "value": false
+          }
+        ]
+      },
+      {
+        "title": "主刻度样式",
+        "prop": "major",
+        "children": [
+          {
+            "title": "线条粗细",
+            "prop": "width",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "线条长短",
+            "prop": "length",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "标签和轴之间的间距",
+            "prop": "pad",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "上轴是否显示刻度",
+            "prop": "top",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "右轴是否显示刻度",
+            "prop": "right",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "上轴是否显示标签",
+            "prop": "labeltop",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "右轴是否显示标签",
+            "prop": "labelright",
+            "type": "switch",
+            "value": false
+          }
+        ]
+      },
+      {
+        "title": "次刻度样式",
+        "prop": "minor",
+        "children": [
+          {
+            "title": "线条粗细",
+            "prop": "width",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "线条长短",
+            "prop": "length",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "标签和轴之间的间距",
+            "prop": "pad",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "上轴是否显示刻度",
+            "prop": "top",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "右轴是否显示刻度",
+            "prop": "right",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "上轴是否显示标签",
+            "prop": "labeltop",
+            "type": "switch",
+            "value": false
+          },
+          {
+            "title": "右轴是否显示标签",
+            "prop": "labelright",
+            "type": "switch",
+            "value": false
+          }
+        ]
+      },
+      {
+        "title": "y轴标签样式",
+        "prop": "plt_yticks",
+        "children": [
+          {
+            "title": "旋转多少度",
+            "prop": "rotation",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "垂直对齐方式",
+            "prop": "verticalalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "left",
+                "label": "靠左"
+              },
+              {
+                "value": "center",
+                "label": "居中"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "文组描述",
+    "icon": "icon-wenzi",
+    "prop": "desc_para",
+    "isTop": true,
+    "children": [
+      {
+        "title": "主标题",
+        "prop": "heading",
+        "popup": "文组描述；主要包含主标题、副标题、发布单位、时间等一些文字描述。不需要时忽略此参数。\n *注意: \nx:0.005 x_alalignment:left代表文字距离ax left边界 0.005",
+        "popupWidth": 250,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "沿x轴对齐方式",
+            "prop": "x_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "沿y轴对齐方式",
+            "prop": "y_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "标题描述",
+            "prop": "s",
+            "type": "input",
+            "value": ""
+          },
+          {
+            "title": "字体设置",
+            "prop": "pop",
+            "children": [
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "type": "input-number",
+                "value": 0
+              },
+              {
+                "title": "水平对齐",
+                "prop": "horizontalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "top",
+                    "label": "靠上"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  },
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  }
+                ]
+              },
+              {
+                "title": "垂直对齐",
+                "prop": "verticalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  },
+                  {
+                    "value": "center",
+                    "label": "居中"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "副标题",
+        "prop": "subtitle",
+        "popup": "文组描述；主要包含主标题、副标题、发布单位、时间等一些文字描述。不需要时忽略此参数。\n *注意: \nx:0.005 x_alalignment:left代表文字距离ax left边界 0.005",
+        "popupWidth": 250,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "沿x轴对齐方式",
+            "prop": "x_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "沿y轴对齐方式",
+            "prop": "y_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "标题描述",
+            "prop": "s",
+            "type": "input",
+            "value": ""
+          },
+          {
+            "title": "字体设置",
+            "prop": "pop",
+            "children": [
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "type": "input-number",
+                "value": 0
+              },
+              {
+                "title": "水平对齐",
+                "prop": "horizontalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "top",
+                    "label": "靠上"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  },
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  }
+                ]
+              },
+              {
+                "title": "垂直对齐",
+                "prop": "verticalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  },
+                  {
+                    "value": "center",
+                    "label": "居中"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "发布单位",
+        "prop": "pub_unit",
+        "popupWidth": 250,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "沿x轴对齐方式",
+            "prop": "x_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "沿y轴对齐方式",
+            "prop": "y_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "标题描述",
+            "prop": "s",
+            "type": "input",
+            "value": ""
+          },
+          {
+            "title": "字体设置",
+            "prop": "pop",
+            "children": [
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "type": "input-number",
+                "value": 0
+              },
+              {
+                "title": "水平对齐",
+                "prop": "horizontalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "top",
+                    "label": "靠上"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  },
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  }
+                ]
+              },
+              {
+                "title": "垂直对齐",
+                "prop": "verticalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  },
+                  {
+                    "value": "center",
+                    "label": "居中"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "制作时间",
+        "prop": "par_time",
+        "popupWidth": 250,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "沿x轴对齐方式",
+            "prop": "x_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "沿y轴对齐方式",
+            "prop": "y_alalignment",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "top",
+                "label": "靠上"
+              },
+              {
+                "value": "right",
+                "label": "靠右"
+              },
+              {
+                "value": "bottom",
+                "label": "靠下"
+              },
+              {
+                "value": "left",
+                "label": "靠左"
+              }
+            ]
+          },
+          {
+            "title": "标题描述",
+            "prop": "s",
+            "type": "input",
+            "value": ""
+          },
+          {
+            "title": "字体设置",
+            "prop": "pop",
+            "children": [
+              {
+                "title": "字体大小",
+                "prop": "fontsize",
+                "type": "input-number",
+                "value": 0
+              },
+              {
+                "title": "水平对齐",
+                "prop": "horizontalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "top",
+                    "label": "靠上"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  },
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  }
+                ]
+              },
+              {
+                "title": "垂直对齐",
+                "prop": "verticalalignment",
+                "type": "radio",
+                "value": "",
+                "children": [
+                  {
+                    "value": "left",
+                    "label": "靠左"
+                  },
+                  {
+                    "value": "center",
+                    "label": "居中"
+                  },
+                  {
+                    "value": "right",
+                    "label": "靠右"
+                  },
+                  {
+                    "value": "bottom",
+                    "label": "靠下"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "其它多种文字描述",
+        "prop": "other_desc",
+        "isTop": true,
+        "value": [],
+        "type": "tree-list2"
+      }
+    ]
+  },
+  {
+    "title": "指北针和比例尺",
+    "icon": "icon-bilichi",
+    "prop": "com_scale",
+    "isTop": true,
+    "children": [
+      {
+        "title": "指北针；不需要时忽略此参数",
+        "prop": "compass",
+        "isNegligible": true,
+        "ngligibleVal": true,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "大小",
+            "prop": "size",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "样式",
+            "prop": "style",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "arrow",
+                "label": "箭头"
+              },
+              {
+                "value": "star",
+                "label": "星标"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "比例尺；不需要时忽略此参数",
+        "prop": "scale",
+        "isNegligible": true,
+        "ngligibleVal": true,
+        "children": [
+          {
+            "title": "x轴坐标位置",
+            "prop": "x",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "y轴坐标位置",
+            "prop": "y",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "长度",
+            "prop": "length",
+            "type": "input-number",
+            "value": 0,
+            "min": 0
+          },
+          {
+            "title": "单位",
+            "prop": "units",
+            "type": "radio",
+            "value": "",
+            "children": [
+              {
+                "value": "km",
+                "label": "km"
+              },
+              {
+                "value": "m",
+                "label": "m"
+              }
+            ]
+          },
+          {
+            "title": "标签",
+            "prop": "xticks",
+            "max": 0,
+            "min": 0,
+            "type": "input-number-list",
+            "value": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "图标",
+    "icon": "icon-tubiao",
+    "isTop": true,
+    "prop": "icon_img",
+    "value": [],
+    "type": "tree-list"
+  },
+  {
+    "title": "输出配置",
+    "icon": "icon-shuchu",
+    "prop": "out_para",
+    "isTop": true,
+    "children": [
+      {
+        "title": "产品图像输出地址",
+        "prop": "img_path",
+        "type": "input",
+        "value": ""
+      },
+      {
+        "title": "输出图像的一些参数",
+        "prop": "img_pop",
+        "children": [
+          {
+            "title": "四周留白距离",
+            "prop": "pad_inches",
+            "type": "input-number",
+            "value": 0
+          },
+          {
+            "title": "分辨率",
+            "prop": "dpi",
+            "type": "input-number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "title": "提取geo_json文件",
+        "prop": "geojson_path",
+        "popup": "与contour_f的fill_type相应，根据填充类型进行提取",
+        "type": "input",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "title": "数据库配置",
+    "icon": "icon-shujukushezhi",
+    "prop": "data_conn",
+    "isTop": true,
+    "children": [
+      {
+        "title": "数据引擎；目前只支持myslq",
+        "prop": "engine",
+        "value": "",
+        "type": "radio",
+        "children": [
+          {
+            "label": "mysql",
+            "value": "mysql"
+          }
+        ]
+      },
+      {
+        "title": "IP",
+        "prop": "host",
+        "value": "",
+        "type": "input"
+      },
+      {
+        "title": "用户名",
+        "prop": "user",
+        "value": "",
+        "type": "input"
+      },
+      {
+        "title": "密码",
+        "prop": "passwd",
+        "showPassword": true,
+        "value": "",
+        "type": "input"
+      },
+      {
+        "title": "端口",
+        "prop": "port",
+        "value": 0,
+        "type": "input-number"
+      },
+      {
+        "title": "数据库名称",
+        "prop": "database",
+        "value": "",
+        "type": "input"
+      }
+    ]
+  },
+  {
+    "title": "test",
+    "prop": "test",
+    "isTop": true,
+    "value": "",
+    "type": "input"
+  }
+]
