@@ -1,0 +1,245 @@
+{
+  "data_type": "station",
+  "data_sources": "select t.station_id_c,t.station_name,longitude,latitude,p.tem_min from t_tem_hour as p left join t_station as t on p.station_id_c = t.station_id_c where t.city = '绍兴市'  and p.datetime = '2024-04-21 12:00:00' and p.tem_min != '999999' and p.station_id_c != 'KQ546'",
+  "interpolation": {
+    "method": {
+      "name": "kriging",
+      "variogram_model": "linear"
+    },
+    "scope": [],
+    "resolution": 0.01
+  },
+  "area_para": {
+    "area_lev": 2,
+    "area_code": 330600
+  },
+  "grade_para": {},
+  "figure": {
+    "fig_size": [
+      12,
+      12
+    ],
+    "rect_size": [
+      0.1,
+      0.1,
+      0.8,
+      0.8
+    ]
+  },
+  "map_para": {
+    "under_para": {},
+    "ax_pad": [
+      0.07,
+      0.07,
+      0.07,
+      0.07
+    ],
+    "area_shape_max": {
+      "shp_file": "D:/neo_share/fxds/shp/绍兴/绍兴市行政区划.shp",
+      "lw": 1.5,
+      "ec": "#000000",
+      "zorder": 6
+    },
+    "subordinate_regions": [
+      {
+        "lower_level": 3,
+        "shp_file": "D:/neo_share/fxds/shp/绍兴/绍兴市区县行政区划.shp",
+        "lw": 0.8,
+        "ec": "#000000",
+        "zorder": 3
+      },
+      {
+        "lower_level": 4,
+        "shp_file": "D:/neo_share/fxds/shp/绍兴/Town.shp",
+        "lw": 0.8,
+        "ec": "#6F6E6E",
+        "zorder": 2
+      }
+    ],
+    "river_system": [
+      {
+        "lower_level": 5,
+        "shp_file": "",
+        "lw": 0.8,
+        "ec": "#A0D7F9",
+        "zorder": 7
+      }
+    ],
+    "other_shape": [],
+    "grid_lines": {
+      "linewidth": 1.2,
+      "color": "#7C7C7C",
+      "alpha": 1,
+      "linestyle": "--"
+    }
+  },
+  "contour_f": {
+    "fill_type": [
+      "area"
+    ],
+    "levels": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40
+    ],
+    "color_code": [
+      "#0882f7",
+      "#08a2f7",
+      "#08beef",
+      "#08dbef",
+      "#18ffff",
+      "#18ffbd",
+      "#18ff84",
+      "#18ff42",
+      "#84ff18",
+      "#9cff18",
+      "#bdff18",
+      "#deff18",
+      "#ffe718",
+      "#ffcb18",
+      "#ffaa18",
+      "#ff8e18",
+      "#ff7118",
+      "#ff5118",
+      "#ff3c18"
+    ],
+    "extend": "both",
+    "alpha": 1,
+    "sigma": 0,
+    "fill_val": {
+      "type": "station",
+      "decimals": 1,
+      "fontsize": 6,
+      "step": 50
+    },
+    "leg_para": {
+      "type": "lump",
+      "level_str": [],
+      "auto_size": 6,
+      "reversed": "desc",
+      "patch": {},
+      "leg_handle": {
+        "ncol": 1,
+        "loc": "lower left",
+        "handleheight": 0.8,
+        "handlelength": 2,
+        "frameon": true,
+        "borderaxespad": 0.8,
+        "fontsize": 13
+      },
+      "leg_title": {
+        "s": "图例(℃)",
+        "fontsize": 13
+      }
+    }
+  },
+  "ticks_para": {
+    "line_width": 1.2,
+    "draw_labels": true,
+    "lon_ticks": [
+      119.8,
+      120.1,
+      120.4,
+      120.7,
+      121.0
+    ],
+    "lat_ticks": [
+      29.2,
+      29.5,
+      29.8,
+      30.1
+    ],
+    "nx": 0,
+    "ny": 0,
+    "label_size": 13,
+    "xy_formatter": {
+      "dms": false
+    },
+    "major": {
+      "width": 1.2,
+      "length": 6,
+      "pad": 4,
+      "top": false,
+      "right": false,
+      "labeltop": false,
+      "labelright": false
+    },
+    "minor": {
+      "width": 1.2,
+      "length": 4,
+      "pad": 4,
+      "top": false,
+      "right": false,
+      "labeltop": false,
+      "labelright": false
+    },
+    "plt_yticks": {}
+  },
+  "desc_para": {
+    "heading": {
+      "x": 0.007,
+      "y": -0.007,
+      "x_alalignment": "left",
+      "y_alalignment": "top",
+      "s": "绍兴市最低气温分布图_2024年04月21日12时00分",
+      "pop": {
+        "fontsize": 16,
+        "horizontalalignment": "left",
+        "verticalalignment": "top",
+        "color": "#000000"
+      }
+    },
+    "subtitle": {
+      "x": 0,
+      "y": 0.055,
+      "x_alalignment": "right",
+      "y_alalignment": "bottom",
+      "s": "绍兴市气象台2024年04月21日12时01分",
+      "pop": {
+        "fontsize": 12,
+        "horizontalalignment": "right",
+        "verticalalignment": "bottom",
+        "color": "#7C7C7C"
+      }
+    },
+    "pub_unit": {},
+    "par_time": {},
+    "other_desc": []
+  },
+  "com_scale": {
+    "compass": {},
+    "scale": {}
+  },
+  "icon_img": [],
+  "out_para": {
+    "img_path": "{root_dir}/data/example/png/产品制作/绍兴市实况气温分布图.png",
+    "img_pop": {
+      "pad_inches": 0.35,
+      "dpi": 96
+    },
+    "geojson_path": ""
+  },
+  "data_conn": {
+    "engine": "mysql",
+    "host": "39.105.59.89",
+    "user": "root",
+    "passwd": "spd@123",
+    "port": 8600,
+    "database": "product_image"
+  }
+}

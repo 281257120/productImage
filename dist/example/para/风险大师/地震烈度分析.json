@@ -1,0 +1,162 @@
+{
+	"data_type": "station",
+	"data_sources1": "select Station_Id_C,Station_Name,Lon,Lat,Station_Val from t_station_val",
+	"data_sources": "58456,name,120.52,30.63,0.18;K5510,name,120.33,30.61,0.4;K5511,name,120.44,30.54,0.8;K5523,name,120.54,30.53,0.66;K5524,name,120.55,30.75,0.7;K5529,name,120.61,30.58,0.1;K5540,name,120.54,30.53,0.2;",
+	"interpolation": {
+		"method": {
+			"name": "idw",
+			"power": 2,
+			"search_radius": 6
+		},
+		"scope": [],
+		"resolution": 0.002
+	},
+	"area_para": {
+		"area_lev": 3,
+		"area_code": 330483
+	},
+	"figure": {
+		"fig_size": [12, 12],
+		"rect_size": [0.1, 0.1, 0.8, 0.8]
+	},
+	"map_para": {
+		"under_para": {
+			"under_type": "",
+			"level": 11,
+			"layer": "vec",
+			"mark": "cva"
+		},
+		"ax_pad": [0.07, 0.07, 0.04, 0.04],
+		"area_shape_max":{
+			"shp_file":"",
+			"lw": 1.2,
+			"ec": "#A57346",
+			"zorder": 6
+		},
+		"subordinate_regions": [
+
+		]
+	},
+	"grade_para": {
+		"method": "natural_breaks",
+		"n_classes": 4
+	},
+	"contour_f": {
+		"fill_type": ["area"],
+		"levels": [],
+		"color_code": ["#E5F2FA", "#BADAF3", "#A5BFF2", "#80A6CB"],
+		"extend":"neither",
+		"alpha": 0.85,
+		"sigma": 5,
+		"fill_val":{
+
+		},
+		"leg_para": {
+			"type": "lump",
+			"level_str": ["低等级", "较低等级", "较高等级", "高等级"],
+			"reversed":"asc",
+			"patch":{
+				"edgecolor":"#000000",
+				"linewidth":0.5
+			},
+			"leg_handle":{
+				"ncol":4,
+				"loc":"lower center",
+				"handleheight":2,
+				"handlelength":3,
+				"frameon":false,
+				"fontsize":14
+			}
+		}
+	},
+	"ticks_para": {
+		"lon_ticks": [],
+		"lat_ticks": [],
+		"nx": 0,
+		"ny": 0,
+		"label_size": 13,
+		"line_width": 1.2,
+		"xy_formatter": {
+			"dms": false
+		},
+		"major": {
+			"width": 1.2,
+			"length": 6,
+			"pad": 4,
+			"top": true,
+			"right": true,
+			"labeltop": true,
+			"labelright": true
+		},
+		"minor": {
+			"width": 1.2,
+			"length": 4,
+			"pad": 4,
+			"top": true,
+			"right": true,
+			"labeltop": true,
+			"labelright": true
+		},
+		"plt_yticks": {
+			"rotation": 90,
+			"verticalalignment": "center"
+		}
+	},
+	"desc_para": {
+		"heading": {
+			"x": 0.04,
+			"y": 0.05,
+			"x_alalignment": "left",
+			"y_alalignment": "top",
+			"s": "地震烈度分析",
+			"pop": {
+				"fontsize": 25,
+				"horizontalalignment": "left",
+				"verticalalignment": "bottom"
+			}
+		},
+		"other_desc": [
+
+		]
+	},
+	"com_scale": {
+		"compass": {
+			"x": 0.95,
+			"y": 0.92,
+			"size": 15,
+			"style": "arrow"
+		},
+		"scale": {
+			"x": 0.05,
+			"y": 0.1,
+			"length": 5,
+			"units": "km",
+			"xticks": [0, 3, 5]
+		}
+	},
+	"icon_img": [
+		{
+			"img_name": "img_1",
+			"img_path": "{root_dir}/data/icon/img_1.jpg",
+			"rect_size": [0.0, 0.045, 0.035, 0.035],
+			"x_alalignment": "left",
+			"y_alalignment": "top"
+		}
+	],
+	"out_para": {
+		"img_path": "{root_dir}/data/example/png/风险大师/地震烈度分析.png",
+		"img_pop": {
+			"pad_inches": 0.3,
+			"dpi": 96
+		},
+		"geojson_path": ""
+	},
+	"data_conn":{
+		"engine":"mysql",
+		"host":"39.105.59.89",
+		"user":"root",
+		"passwd":"spd@123",
+		"port":8600,
+		"database":"product_image"
+	}
+}
