@@ -1,25 +1,16 @@
-<!--
- * @Author: zouyaoji@https://github.com/zouyaoji
- * @Date: 2022-05-25 14:53:30
- * @LastEditTime: 2024-06-03 13:54:31
- * @LastEditors: Liu Yang
- * @Description:
- * @FilePath: \github-product-image\README.md
--->
-
-# web-template-2023 三维分支
-
 ## 关于
 
-这个项目是基于 VueCesium 的前端集成方案，已使用最新的前端技术栈。
+项目基于主要针对图片出图的项目模板。
+
+这个项目是基于 vite + vue3 + TS 的前端集成方案，已使用最新的前端技术栈。
 
 已经做好项目前期基本的准备工作，并附有示例代码，助力项目快速开发。
 
 项目中用到了 Vite + Typescript 进行开发，使用 Vue 3 `<script setup>` SFCs，查看 [script setup docs](https://cn.vuejs.org/api/sfc-script-setup.html#typescript-only-features) 学习更多。
 
-## 预览
+推荐使用 node16+版本，本模板（v16.17.1）。
 
-[https://zouyaoji.top/vue-cesium-template/](https://281257120.github.io/productImage/dist/)
+[预览本项目](https://281257120.github.io/productImage/dist/)
 
 ## 开发 IDE
 
@@ -28,14 +19,7 @@
 
 ## 功能点
 
-- 使用 vite 构建
-- 主题切换
-- 多国语
-- 登录和注销
-- 模块化全局状态管理(基于 pinia)
-- 封装了 axios 和请求模拟
-- flv / webrtc 播放器组件
-- 代码提交规范
+-
 
 ## 安装
 
@@ -67,29 +51,8 @@ $ pnpm dev
 $ pnpm build
 ```
 
-## 代码提交
-
-命令
-
-```bash
-$ pnpm cz
-```
-
-type 标识代码提交的类型,type 取值通常如下：
-
-- feat: 新增 feature
-- flx: 修复 bug
-- docs: 仅仅修改了文档，比如 README、CHANGELOG、CONTRIBUTE 等
-- style: 仅仅修改了空格、格式缩进、逗号等，不改变代码逻辑
-- refactor: 代码重构，没有加新功能或者修复 bug
-- perf: 优化相关，比如提升性能、体验
-- test: 测试用例，包括单元测试、集成测试等
-- chore: 改变构建流程，或者增加依赖库、工具等
-- revert: 回滚到上一个版本
-
 ## 开发说明
 
-- 原则上 UI 统一采用 [Quasar](https://quasar.dev/) 开发，如有不能满足的需求，可以参考 [海盐普查项目](https://gitee.com/bjspd/spider-census-webapp) 局部引入 [ElementPlus] (https://element-plus.gitee.io/zh-CN/) 等 UI 组件。如果确实不想使用 Quasar 想替换，则需要重构，请根据项目实际情况与项目负责团队成员讨论后再定。但编码风格还请与此模板中的保持一致。
 - 统一采用 Vue3 组合式 API 写法。
 - 业务复杂的组件应该拆分成小组件，避免一个单组件代码过长，逻辑不清晰的情况出现。
 - 业务复杂的组件应该拆分业务，多使用 Composition API 的函数拆分逻辑，如 useXXX。

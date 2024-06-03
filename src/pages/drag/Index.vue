@@ -2,13 +2,14 @@
 * @Description:
 * @Author: Liu Yang
 * @Date: 2023-03-17 14:02:49
- * @LastEditTime: 2024-05-31 15:16:34
+ * @LastEditTime: 2024-06-03 14:19:47
  * @LastEditors: Liu Yang
 -->
 <template>
   <div class="drag-box text-white">
-    <ModelList :modelMenu="modelMenu" :isChanged="isChanged" @update:changeModel="changeModel" />
-    <ModelShow :selItem="selItem" :jsonString="jsonString" :defaultData="defaultData" :imgUrl="imgUrl"
+    <ModelList :model-menu="modelMenu" :is-changed="isChanged" @update:changeModel="changeModel" />
+    <ModelShow
+:sel-item="selItem" :json-string="jsonString" :default-data="defaultData" :img-url="imgUrl"
       @update:isChangeJSON="isChangeJSON" @changeDefaultValue="changeDefaultValue" />
   </div>
 </template>
@@ -26,6 +27,7 @@ import allFormat from '@src/assets/json/imageAllFormat.json'
 
 const { formatData } = useDataFromat()
 const baseUrl = import.meta.env.VITE_VUE_ROUTER_BASE
+console.log(baseUrl)
 // const modelMenu = ref([
 //   {
 //     name: '地图模板',
@@ -153,14 +155,14 @@ const isChanged = ref(false)
 const imgUrl = ref('') as any
 const defaultData = ref([])
 
-const isChangeJSON = (obj) => {
+const isChangeJSON = obj => {
   const { f, json } = obj
   isChanged.value = f
   jsonString.value = JSON.stringify(json, null, 2)
   // changeDefaultValue()
 }
 
-watch(jsonString, (val) => {
+watch(jsonString, val => {
   // console.log(val)
 })
 
@@ -183,11 +185,11 @@ const findItem = (arr, key) => {
   }
 }
 
-const changeModel = (key) => {
+const changeModel = key => {
   store.system.useUserStore(pinia).changeLevelsTemp([])
   selItem.value = findItem(modelMenu.value, key)
-  const jsonUrl = `${baseUrl}example/para/${selItem.value.catalogue}/${selItem.value.jsonurl}`
-  imgUrl.value = `${baseUrl}example/png/${selItem.value.catalogue}/${selItem.value.imgurl}`
+  const jsonUrl = `example/para/${selItem.value.catalogue}/${selItem.value.jsonurl}`
+  imgUrl.value = `example/png/${selItem.value.catalogue}/${selItem.value.imgurl}`
 
   api.common.getStaticData(jsonUrl).then(res => {
     // jsonString.value = JSON.stringify(selItem.value.json, null, 2)
@@ -200,7 +202,7 @@ const changeDefaultValue = () => {
   // defaultData.value = []
   nextTick(() => {
     defaultData.value = formatData(JSON.parse(jsonString.value), allFormat)
-    console.log("最终模板数据:", defaultData.value)
+    console.log('最终模板数据:', defaultData.value)
   })
 }
 //地图给menu添加index
@@ -219,7 +221,6 @@ onBeforeMount(() => {
   addModelMenuIndex(modelMenu.value)
 })
 
-onMounted(() => { })
 
 </script>
 <style lang='scss' scoped>
