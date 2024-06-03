@@ -1,10 +1,10 @@
 <!--
  * @Author: zouyaoji@https://github.com/zouyaoji
  * @Date: 2022-05-25 14:53:30
- * @LastEditTime: 2023-02-23 01:03:06
- * @LastEditors: zouyaoji
+ * @LastEditTime: 2024-06-03 13:54:31
+ * @LastEditors: Liu Yang
  * @Description:
- * @FilePath: \web-template-2023\README.md
+ * @FilePath: \github-product-image\README.md
 -->
 
 # web-template-2023 三维分支
@@ -16,6 +16,10 @@
 已经做好项目前期基本的准备工作，并附有示例代码，助力项目快速开发。
 
 项目中用到了 Vite + Typescript 进行开发，使用 Vue 3 `<script setup>` SFCs，查看 [script setup docs](https://cn.vuejs.org/api/sfc-script-setup.html#typescript-only-features) 学习更多。
+
+## 预览
+
+[https://zouyaoji.top/vue-cesium-template/](https://281257120.github.io/productImage/dist/)
 
 ## 开发 IDE
 
